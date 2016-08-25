@@ -1,0 +1,291 @@
+Christos Faloutsos
+Hector Garcia-Molina
+Michael Stonebraker
+Jiawei Han
+Laks V. S. Lakshmanan
+David J. DeWitt
+Jayant R. Haritsa
+Divyakant Agrawal
+Shamkant B. Navathe
+Krithi Ramamritham
+Clement T. Yu
+Elke A. Rundensteiner
+Donald Kossmann
+Gerhard Weikum
+Beng Chin Ooi
+Georges Gardarin
+Philip S. Yu
+Rakesh Agrawal
+Masaru Kitsuregawa
+Stanley Y. W. Su
+Matthias Jarke
+Dennis Shasha
+Jeffrey F. Naughton
+Elisa Bertino
+Hans-Peter Kriegel
+Richard T. Snodgrass
+Raghu Ramakrishnan
+Umeshwar Dayal
+Z. Meral Ozsoyoglu
+Wei Wang
+Serge Abiteboul
+Johannes Gehrke
+Sharma Chakravarthy
+Roger King
+Michael J. Franklin
+Guy M. Lohman
+Philip A. Bernstein
+Cyrus Shahabi
+Gustavo Alonso
+Amit P. Sheth
+Divesh Srivastava
+Rajeev Rastogi
+Jim Gray
+Michael J. Carey
+Karl Aberer
+Carlo Zaniolo
+M. Tamer Ozsu
+David Maier
+Chin-Wan Chung
+Jignesh M. Patel
+Kien A. Hua
+Patrick Valduriez
+Jose A. Blakeley
+Amarnath Gupta
+Panos K. Chrysanthis
+Wolfgang Lehner
+Joseph M. Hellerstein
+Kian-Lee Tan
+Renee J. Miller
+Stanley B. Zdonik
+Surajit Chaudhuri
+Hanan Samet
+Stefano Ceri
+Jian Pei
+Arthur M. Keller
+Walid G. Aref
+Nick Roussopoulos
+Christian S. Jensen
+Dan Suciu
+Ramez Elmasri
+K. Selcuk Candan
+Yannis E. Ioannidis
+Gultekin Ozsoyoglu
+Alfons Kemper
+Boualem Benatallah
+Bongki Moon
+Raymond T. Ng
+Amol Deshpande
+Bernhard Mitschang
+Yahiko Kambayashi
+Sharad Mehrotra
+Douglas Stott Parker Jr
+Kevin Chen-Chuan Chang
+Samuel Madden
+Ambuj K. Singh
+Dimitris Papadias
+Lei Chen
+Per-Ake Larson
+Kyu-Young Whang
+Jaideep Srivastava
+Hongjun Lu
+Martin L. Kersten
+Susan B. Davidson
+Chen Li
+Sakti Pramanik
+Arie Segev
+Peter Triantafillou
+Ouri Wolfson
+Anastassia Ailamaki
+Sushil Jajodia
+Francois Bry
+Alberto O. Mendelzon
+Mong-Li Lee
+Werner Kiesling
+Soumen Chakrabarti
+Jun Yang
+Calton Pu
+Richard Hull
+C. Mohan
+Yehoshua Sagiv
+S. Bing Yao
+Wesley W. Chu
+Arie Shoshani
+Juliana Freire
+Maurizio Lenzerini
+Theodore Johnson
+Bernhard Seeger
+Volker Markl
+Norman W. Paton
+Peter C. Lockemann
+Kenneth Salem
+Tova Milo
+Christoph Koch
+Jarek Gryz
+William Perrizo
+Dik Lun Lee
+Aoying Zhou
+Hans-Jorg Schek
+Amr El Abbadi
+Thomas Seidl
+Tore Risch
+Geneva G. Belford
+Keki B. Irani
+Bharat K. Bhargava
+H. V. Jagadish
+Klaus R. Dittrich
+AnHai Doan
+Witold Litwin
+Jayavel Shanmugasundaram
+Sunita Sarawagi
+Betty Salzberg
+Asuman Dogac
+Goetz Graefe
+Anthony K. H. Tung
+Ada Wai-Chee Fu
+Aidong Zhang
+George Kollios
+Sunil Prabhakar
+Dennis Tsichritzis
+Nikos Mamoulis
+Srinivasan Parthasarathy
+Tok Wang Ling
+Erhard Rahm
+Arbee L. P. Chen
+Peter Widmayer
+Won Kim
+Neoklis Polyzotis
+Mukesh K. Mohania
+Peter Buneman
+Shivnath Babu
+Shahram Ghandeharizadeh
+Xiaofang Zhou
+Alain Pirotte
+Hans-Arno Jacobsen
+Vagelis Hristidis
+Munir Cochinwala
+Peter Dadam
+Abraham Silberschatz
+Zhen Hua Liu
+Lois M. L. Delcambre
+Cesar A. Galindo-Legaria
+Alexander Brodsky
+Sourav S. Bhowmick
+Eduardo B. Fernandez
+Kai-Uwe Sattler
+Tomasz Imielinski
+Nick Koudas
+David K. Hsiao
+Evaggelia Pitoura
+Andreas Heuer
+Sang Kyun Cha
+Alejandro P. Buchmann
+Ming-Syan Chen
+Paolo Atzeni
+Harry K. T. Wong
+Haruo Yokota
+Avigdor Gal
+Oded Shmueli
+Guido Moerkotte
+Qiong Luo
+William J. McKenna
+Jianzhong Li
+Shashi Shekhar
+Colette Rolland
+Yi Chen
+Michael Kifer
+Praveen Seshadri
+Yannis Theodoridis
+Qing Li
+Dirk Van Gucht
+Jagannathan Srinivasan
+Peter J. Haas
+Haixun Wang
+Gottfried Vossen
+Ravi Kumar
+Sriram Padmanabhan
+Chee Yong Chan
+Yannis Papakonstantinou
+Masatoshi Yoshikawa
+S. Muthukrishnan
+Mariano P. Consens
+Maurice van Keulen
+Marek Rusinkiewicz
+Gerald J. Popek
+Torsten Suel
+Ravi Krishnamurthy
+David B. Lomet
+Vassilis J. Tsotras
+Vasilis Vassalos
+Alin Dobra
+Michael H. Bohlen
+Dimitrios Gunopulos
+Georg Lausen
+Peter M. G. Apers
+Tirthankar Lahiri
+Alon Y. Halevy
+Luis Gravano
+Andrew Witkowski
+Dieter Gawlick
+Chris Clifton
+Michael Gertz
+Rajeev Motwani
+Yufei Tao
+Edward Y. Chang
+S. Sudarshan
+Atsuyuki Morishima
+Donald D. Chamberlin
+Gunter Schlageter
+Arif Ghafoor
+Siva Ravada
+Yossi Matias
+Omran A. Bukhres
+Vijayshankar Raman
+Tzi-cker Chiueh
+Limsoon Wong
+Balakrishna R. Iyer
+Xuemin Lin
+David A. Bell
+Michel Leonard
+Edward Sciore
+Antoni Wolski
+Gerald A. Wilson
+Daniel J. Rosenkrantz
+Domenico Sacca
+Kevin S. Beyer
+Dina Bitton
+Catharine M. Wyss
+Magdalena Balazinska
+Alexander Borgida
+Hakan Ferhatosmanoglu
+Katsumi Tanaka
+Xiaolei Qian
+Wang-Chien Lee
+Fred J. Maryanski
+Akifumi Makinouchi
+Henry F. Korth
+Isabel F. Cruz
+Stavros Christodoulakis
+Marianne Winslett
+Alfred G. Dale
+Minos N. Garofalakis
+Peter Scheuermann
+Erich J. Neuhold
+Jennifer Widom
+Zachary G. Ives
+Kenneth A. Ross
+Myoung-Ho Kim
+Thanh Tran
+Felix Naumann
+Wenfei Fan
+Wenliang Du
+Mary F. Fernandez
+Esen A. Ozkarahan
+Alin Deutsch
+Prabhakar Raghavan
+Michel E. Adiba
+Ming T. Liu
+Toshimi Minoura
+Dongqing Yang
+Assaf Schuster
+Le Gruenwald

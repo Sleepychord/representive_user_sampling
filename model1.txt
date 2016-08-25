@@ -1,0 +1,291 @@
+Jiawei Han
+Philip S. Yu
+Christos Faloutsos
+ChengXiang Zhai
+Bing Liu
+Vipin Kumar
+Jieping Ye
+Ming-Syan Chen
+C. Lee Giles
+Padhraic Smyth
+Tao Li
+Jian Pei
+W. Bruce Croft
+Wei Wang
+Rong Jin
+Ji-Rong Wen
+William W. Cohen
+Charu C. Aggarwal
+Andrew McCallum
+Srinivasan Parthasarathy
+Wynne Hsu
+Charles L. A. Clarke
+Hui Xiong
+Wei-Ying Ma
+Martin Ester
+Ophir Frieder
+Wei Fan
+Eamonn J. Keogh
+Mohammed Javeed Zaki
+Jianyong Wang
+Rohini K. Srihari
+Sourav S. Bhowmick
+Qiaozhu Mei
+Ling Liu
+James Allan
+Heikki Mannila
+Michael R. Lyu
+Hans-Peter Kriegel
+Mong-Li Lee
+Ravi Kumar
+Huan Liu
+Jiong Yang
+Kenji Yamanishi
+Michael Steinbach
+Hongyuan Zha
+Yong Yu
+David Jensen
+Xiaohua Hu
+George Karypis
+Elke A. Rundensteiner
+Ruoming Jin
+Nazli Goharian
+Ke Wang
+Chris H. Q. Ding
+Xuanhui Wang
+Joydeep Ghosh
+Weiguo Fan
+Pedro Domingos
+Bamshad Mobasher
+Xueqi Cheng
+Berthier A. Ribeiro-Neto
+Yehuda Koren
+Gerhard Weikum
+Edward Y. Chang
+Wang-Chien Lee
+Dimitrios Gunopulos
+Ronen Feldman
+Irwin King
+Inderjit S. Dhillon
+Jaime G. Carbonell
+Zheng Chen
+Pang-Ning Tan
+Tao Tao
+Aristides Gionis
+Xifeng Yan
+Pavel Calado
+Haixun Wang
+Andrei Z. Broder
+Jeffrey Xu Yu
+Prasenjit Mitra
+Jon M. Kleinberg
+Jun-ichi Takeuchi
+Lyle H. Ungar
+Bart Goethals
+Lei Chen
+Sheng Ma
+Agma J. M. Traina
+Johannes Gehrke
+James P. Callan
+Kevin Chen-Chuan Chang
+Rosie Jones
+Jian-Yun Nie
+Shenghuo Zhu
+Won Suk Lee
+George Forman
+Vanja Josifovski
+Iadh Ounis
+Glenn Fung
+Caetano Traina Jr
+Hong Cheng
+Hang Li
+Qiang Yang
+Clement T. Yu
+Yi-fang Brook Wu
+Andrew W. Moore
+Yiming Yang
+Zijian Zheng
+Ravi Janardan
+Yun Chi
+Srujana Merugu
+Hwanjo Yu
+Anthony K. H. Tung
+Szymon Jaroszewicz
+Zaiqing Nie
+Kotagiri Ramamohanarao
+Mukesh K. Mohania
+Yannis Theodoridis
+Jimeng Sun
+Yiming Ma
+Wai Gen Yee
+Xiaodan Zhang
+Dimitri Theodoratos
+Jamie Callan
+Ian Davidson
+Xiaohua Zhou
+Lei Zhang
+Dennis Shasha
+Sreenivas Gollapudi
+Yunbo Cao
+Hanghang Tong
+Andrew Tomkins
+Naren Ramakrishnan
+Edward A. Fox
+Lizhu Zhou
+David A. Grossman
+Omid Madani
+R. Bharat Rao
+Dawei Song
+Zhongfei (Mark) Zhang
+Aidong Zhang
+Binyamin Rosenfeld
+M. Tamer Ozsu
+Saharon Rosset
+Marcos Andre Goncalves
+Marius Pasca
+Bin Chen
+Qiankun Zhao
+Kaidi Zhao
+Nivio Ziviani
+Jie Tang
+Gang Luo
+Bernhard Seeger
+Alexander Tuzhilin
+Thorsten Joachims
+Timos K. Sellis
+Fabian Morchen
+D. Sivakumar
+Shantanu Godbole
+Wolfgang Nejdl
+Ada Wai-Chee Fu
+Eugene Agichtein
+Stefan Buttcher
+Eric P. Xing
+Amr El Abbadi
+Ryen W. White
+Ramesh Nallapati
+Qi Li
+Gui-Rong Xue
+Belle L. Tseng
+Javed A. Aslam
+Hua-Jun Zeng
+Zhong Su
+Tok Wang Ling
+Dmitriy Fradkin
+Osmar R. Zaiane
+Edleno Silva de Moura
+Le Gruenwald
+Qiang Wang
+Robert L. Grossman
+Jinbo Bi
+Yuefeng Li
+Nematollaah Shiri
+Dik Lun Lee
+Abdur Chowdhury
+Sunita Sarawagi
+Jing Gao
+Raj Bhatnagar
+Shuming Shi
+Joao Gama
+Ling Ma
+Richard D. Lawrence
+Rong Yan
+Michail Vlachos
+Yanzan Zhou
+Xin Chen
+Stefano Lonardi
+Ping Luo
+Pascal Poncelet
+Tie-Yan Liu
+Mario A. Nascimento
+Edward Omiecinski
+Gagan Agrawal
+Wei Peng
+Theodore Dalamagas
+Bo Zhang
+Weiyi Meng
+Massimo Melucci
+Jian-Tao Sun
+Chao Liu
+Hiroshi Mamitsuka
+Yan Liu
+Kave Eshghi
+Shuiwang Ji
+Ben Shneiderman
+Aixin Sun
+Martin Scholz
+Young-Koo Lee
+Justin Zobel
+Xin Jin
+Bin He
+Ruihua Song
+Jennifer G. Dy
+Yue Xu
+Tobias Scheffer
+Rong Pan
+Donald Metzler
+Xiaoli Li
+Mounia Lalmas
+Dmitry Pavlov
+Paul B. Kantor
+Sharad Mehrotra
+Hao Ma
+Xiaofeng He
+Srivatsan Laxman
+Sanjay Ranka
+Ratko Orlandic
+Peter Bruza
+Qiong Luo
+Weimin Xiao
+Kristina Lisa Klinkner
+Charles Elkan
+Divyakant Agrawal
+Natasa Milic-Frayling
+Taneli Mielikainen
+Igor V. Cadez
+Deepak Agarwal
+Silviu Cucerzan
+Xiang Zhang
+Sameep Mehta
+Raymond J. Mooney
+Ying Liu
+Horst D. Simon
+Haixuan Yang
+Ira Assent
+Seung-Taek Park
+Prabhakar Raghavan
+Spiros Papadimitriou
+Keke Chen
+Altigran Soares da Silva
+Michael E. Houle
+Xin Li
+Klemens Bohm
+Craig Macdonald
+Naonori Ueda
+Byron Dom
+Lise Getoor
+Rohit Gupta
+Thomas Hofmann
+Dennis McLeod
+Tanya Y. Berger-Wolf
+Cheng-Ru Lin
+Chang-Tien Lu
+Panagiotis G. Ipeirotis
+Jianhui Chen
+Jorg Sander
+Rebecca N. Wright
+Gordon Sun
+Hongbo Xu
+Naoki Abe
+David M. Pennock
+Guizhen Yang
+Jun Zhu
+John M. Prager
+Kunal Punera
+Stefan Wrobel
+Carlos Ordonez
+Prem Melville
+Jing Jiang
+Chris Clifton
+Daxin Jiang
+Petros Drineas

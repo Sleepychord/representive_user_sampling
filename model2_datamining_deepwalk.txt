@@ -1,0 +1,169 @@
+Jiawei Han
+Philip S. Yu
+Christos Faloutsos
+Ming-Syan Chen
+Elke A. Rundensteiner
+Bing Liu
+Padhraic Smyth
+ChengXiang Zhai
+C. Lee Giles
+Vipin Kumar
+Hans-Peter Kriegel
+W. Bruce Croft
+Srinivasan Parthasarathy
+Ke Wang
+Eamonn J. Keogh
+Tao Li
+Jieping Ye
+Ophir Frieder
+James Allan
+Wei Wang
+Qiang Yang
+Heikki Mannila
+George Karypis
+Ling Liu
+Ji-Rong Wen
+Andrew McCallum
+Andrew W. Moore
+Jian Pei
+Hui Xiong
+Rohini K. Srihari
+Dimitrios Gunopulos
+William W. Cohen
+Ruoming Jin
+Charles L. A. Clarke
+Martin Ester
+Mong-Li Lee
+Wei-Ying Ma
+Osmar R. Zaiane
+Edward Y. Chang
+Mohammed Javeed Zaki
+Ravi Kumar
+Rong Jin
+Wai Lam
+Johannes Gehrke
+Wei Fan
+Joydeep Ghosh
+Sourav S. Bhowmick
+David Jensen
+Gerhard Weikum
+Ronen Feldman
+Xindong Wu
+Charles X. Ling
+Pedro Domingos
+Bamshad Mobasher
+Jianyong Wang
+M. Tamer Ozsu
+Jaime G. Carbonell
+Huan Liu
+Kenji Yamanishi
+Jaideep Srivastava
+Berthier A. Ribeiro-Neto
+Clement T. Yu
+Aristides Gionis
+Dennis Shasha
+Lyle H. Ungar
+Kotagiri Ramamohanarao
+Javed A. Aslam
+Charu C. Aggarwal
+Zhi-Hua Zhou
+Wolfgang Nejdl
+Ada Wai-Chee Fu
+Robert L. Grossman
+Xueqi Cheng
+Alexander Tuzhilin
+Wang-Chien Lee
+Michael R. Lyu
+Pascal Poncelet
+Jian-Yun Nie
+Inderjit S. Dhillon
+Amr El Abbadi
+Pang-Ning Tan
+Chris H. Q. Ding
+Mukesh K. Mohania
+Bart Goethals
+Zheng Chen
+Klemens Bohm
+Qiaozhu Mei
+Glenn Fung
+Won Suk Lee
+Usama M. Fayyad
+Wynne Hsu
+Charles Elkan
+Xiaohua Hu
+Hang Li
+Vanja Josifovski
+Yehuda Koren
+Jon M. Kleinberg
+Weiguo Fan
+Jiong Yang
+Anthony K. H. Tung
+Yong Yu
+James P. Callan
+Lei Chen
+Cyrus Shahabi
+Yiming Yang
+Hillol Kargupta
+Tok Wang Ling
+Sheng Ma
+Jamie Callan
+Arno Siebes
+Mounia Lalmas
+Susan Gauch
+Jeffrey Xu Yu
+Hongyuan Zha
+Christopher Meek
+Daniel Barbara
+Ron Kohavi
+Rakesh Agrawal
+Michael Steinbach
+Soumen Chakrabarti
+Timos K. Sellis
+Naren Ramakrishnan
+Ian Davidson
+Yun Chi
+Tobias Scheffer
+Thorsten Joachims
+Omid Madani
+Haixun Wang
+Nazli Goharian
+Yannis Theodoridis
+Edward A. Fox
+Gholamreza Nakhaeizadeh
+Kai-Uwe Sattler
+Jie Tang
+E. K. Park
+Yan Liu
+Natasa Milic-Frayling
+Xuanhui Wang
+Stefan Kramer
+Lise Getoor
+Xin Chen
+Edward Omiecinski
+Elisa Bertino
+George Forman
+Thomas Hofmann
+Justin Zobel
+Xifeng Yan
+Aijun An
+Arbee L. P. Chen
+Le Gruenwald
+Yixin Chen
+Pavel Calado
+Raj Bhatnagar
+Nematollaah Shiri
+Raymond T. Ng
+Wen-Chi Hou
+Prem Melville
+Dan A. Simovici
+Prasenjit Mitra
+Dawei Song
+Sharad Mehrotra
+Diane J. Cook
+Iadh Ounis
+Nikos Mamoulis
+Sanjay Ranka
+Young-Koo Lee
+Agma J. M. Traina
+Lei Zhang
+Jennifer G. Dy
