@@ -24,10 +24,15 @@ key_dict = {}
 
 root_dir = raw_input()
 dirs = os.listdir(root_dir)
+LIMIT = 1
+limit_cnt = 0
 
 for subdir in dirs:
     subdir_full = os.path.join(root_dir, subdir)
     if(os.path.isdir(subdir_full)):
+        if(limit_cnt >= LIMIT):
+            break
+        limit_cnt += 1
         for microblogfile in os.listdir(subdir_full):
             print ("dealing with "+os.path.join(subdir_full, microblogfile))
             f = open(os.path.join(subdir_full, microblogfile), 'r')
@@ -38,6 +43,8 @@ for subdir in dirs:
                 tmp_arr = line.split()
                 user = tmp_arr[2]
                 text = tmp_arr[7]
+                if (text.strip()[:6] == "你好"):
+                    continue
                 tr4w = TextRank4Keyword()
                 tr4w.analyze(text=text, lower=True, window=2)
                 num = len(text) / 50 + 1;
