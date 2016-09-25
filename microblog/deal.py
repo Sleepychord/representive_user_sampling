@@ -13,6 +13,9 @@ from textrank4zh import TextRank4Keyword, TextRank4Sentence
 
 import os
 
+err_out = open("log.txt","w")
+def ReportBug(filename, linenum, content):
+    err_out.write(filename+"\nline "+str(linenum)+"\n"+str(content)+"\n")
 def sort_by_value(d): 
     items=d.items() 
     backitems=[[v[1],v[0]] for v in items] 
@@ -41,9 +44,12 @@ for subdir in dirs:
                 cnt += 1
                 print("line ", cnt)
                 tmp_arr = line.split()
+                if(len(tmp_arr) < 11):
+                    ReportBug(os.path.join(subdir_full, microblogfile), cnt, tmp_arr)
+                    continue
                 user = tmp_arr[2]
-                text = tmp_arr[7]
-                if (text.strip()[:6] == "你好"):
+                text = ''.join(tmp_arr[7:-3])
+                if (text.strip()[:6] == "你好" or text.strip()[:9] == "尊敬的"):
                     continue
                 tr4w = TextRank4Keyword()
                 tr4w.analyze(text=text, lower=True, window=2)
