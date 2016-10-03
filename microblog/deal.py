@@ -20,6 +20,7 @@ def sort_by_value(d):
     items=d.items() 
     backitems=[[v[1],v[0]] for v in items] 
     backitems.sort() 
+    backitems.reverse()
     return [ backitems[i][1] for i in range(0,len(backitems))] #200
 
 key_list = {}
