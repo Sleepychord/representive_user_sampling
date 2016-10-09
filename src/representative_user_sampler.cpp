@@ -187,9 +187,13 @@ void RepresentativeUserSampler::readEdge()//use for streaming
         while(readstr(temp) != EOF) {
             string strtmp = string(temp);
             auto ret2 = register_map.find(strtmp);
+            if(ret2 == register_map.end()) continue;
             int index1 = ret2->second;
             readstr(temp);
-            int index2 = register_map.find(string(temp))->second;
+            strtmp = string(temp);
+            ret2 = register_map.find(strtmp);
+            if(ret2 == register_map.end()) continue;
+            int index2 = ret2->second;
             scanf("%d", &tmp);
             if(people[index1].read_state < 2 && people[index2].read_state < 2 && people[index1].read_state + people[index2].read_state > 0)// new edge
             {
@@ -204,6 +208,7 @@ void RepresentativeUserSampler::readEdge()//use for streaming
         p.read_state = 2;
 }
 void RepresentativeUserSampler::main(){
+    clock_t start_time = clock();
     freopen(output_file.c_str(),"w", stdout);
     for(int u = 0;u < K;u++){
         cout<<"finding "<<u<<endl;
@@ -211,4 +216,5 @@ void RepresentativeUserSampler::main(){
         cout << p->name <<endl;
         choose(p);
     }
+    cout <<" time of calculating is "<< (clock() - start_time) / CLOCKS_PER_SEC <<endl;
 }
