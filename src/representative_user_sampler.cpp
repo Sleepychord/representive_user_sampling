@@ -165,7 +165,9 @@ void RepresentativeUserSampler::readEdge()//use for streaming
         if(!partfile)
             do tmp = getc(stdin); while(tmp != '\n' && tmp != EOF);
         while(readstr(temp) != EOF) {
-            int index1 = register_map.find(string(temp))->second;
+            string strtmp = string(temp);
+            auto ret2 = register_map.find(strtmp);
+            int index1 = ret2->second;
             readstr(temp);
             int index2 = register_map.find(string(temp))->second;
             scanf("%d", &tmp);
