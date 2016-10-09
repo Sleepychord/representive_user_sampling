@@ -1,8 +1,9 @@
-author_file ./input/datamining_author_topics.dat
-coauthor_file ./input/datamining_coauthor_info.dat
-output_file model3_datamining.txt
-K 373
+author_file ./microblog/user.txt
+coauthor_file ./microblog/followcase/
+output_file tencent.txt
+K 2
 B 20
 deepwalk 0
 streaming 0
+partfile 1
 algorithm SSD

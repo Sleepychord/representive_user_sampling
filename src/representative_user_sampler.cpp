@@ -146,20 +146,35 @@ void RepresentativeUserSampler::readEdge()//use for streaming
 {
     int tmp;
     char temp[256];
-    freopen(coauthor_file.c_str(), "r", stdin);
-    do tmp = getc(stdin); while(tmp != '\n' && tmp != EOF);
-    while(readstr(temp) != EOF) {
-        int index1 = register_map.find(string(temp))->second;
-        readstr(temp);
-        int index2 = register_map.find(string(temp))->second;
-        scanf("%d", &tmp);
-        if(people[index1].read_state < 2 && people[index2].read_state < 2 && people[index1].read_state + people[index2].read_state > 0)// new edge
-        {
-            people[index1].nebo.push_back(pair<Person*, double>(&people[index2], tmp * 1.0 / people[index2].paper));
-            people[index2].nebo.push_back(pair<Person*, double>(&people[index1], tmp * 1.0 / people[index1].paper));
+    int num = 0;
+    string filename =(partfile) ? coauthor_file + string("part-00000") : coauthor_file;
+    string copy_pre = coauthor_file;
+    auto nextfile = [& filename, & num, copy_pre](){
+        num ++;
+        char nametmp[100];
+        sprintf(nametmp, "part-%05d", num);
+        filename = copy_pre + nametmp;
+        FILE* fh = fopen(filename.c_str(),"r");
+        if(fh == NULL) return false;
+        else return true;
+    };
+    do{
+        cout << "reading file "<<filename<<endl;
+        freopen(filename.c_str(), "r", stdin);
+        do tmp = getc(stdin); while(tmp != '\n' && tmp != EOF);
+        while(readstr(temp) != EOF) {
+            int index1 = register_map.find(string(temp))->second;
+            readstr(temp);
+            int index2 = register_map.find(string(temp))->second;
+            scanf("%d", &tmp);
+            if(people[index1].read_state < 2 && people[index2].read_state < 2 && people[index1].read_state + people[index2].read_state > 0)// new edge
+            {
+                people[index1].nebo.push_back(pair<Person*, double>(&people[index2], tmp * 1.0 / people[index2].paper));
+                people[index2].nebo.push_back(pair<Person*, double>(&people[index1], tmp * 1.0 / people[index1].paper));
+            }
+            readstr(temp);
         }
-        readstr(temp);
-    }
+    }while(partfile && nextfile());
     for(auto & p: people)
     if(p.read_state == 1)
         p.read_state = 2;

@@ -28,6 +28,7 @@ public:
     std::map<std::string, int> register_map;
     vector<Person> people;
     int K, B, d, maxd;
+    int partfile;
     vector<int> order_list;
     Solver * solver;
     void choose(Person*);
@@ -38,6 +39,7 @@ public:
     RepresentativeUserSampler(const char filename[]): deepwalk(false), streaming(false){
         std::string s;
         std::ifstream fin(filename);
+        partfile = 0;
         while(fin >> s){
             int tmp = 0;
             if(s == "author_file") fin >> author_file;
@@ -45,6 +47,7 @@ public:
             else if (s == "output_file") fin >> output_file;
             else if (s == "K") fin >> K;
             else if (s == "B") fin >> B;
+            else if (s == "partfile") fin >> partfile;
             else if (s == "deepwalk") {fin >> tmp; if(tmp) deepwalk = true;}
             else if (s == "streaming"){fin >> tmp; if(tmp) streaming = true;}
             else if (s == "algorithm"){
@@ -52,7 +55,6 @@ public:
                 fin >> al_name;
                 if(al_name == "SSD")  setSolver(new SSD());
                 else if(al_name == "S3") setSolver(new S3());
-                else if(al_name == "SSD2") setSolver(new SSD2());
                 else {
                     std::cerr<< "now such algorithm"<<std::endl;
                     throw ;

@@ -5,6 +5,7 @@ CPPFLAGS += -Isrc/include \
 OBJS = $(addprefix $(BUILD_DIR)/,$(CXXSOURCES:.cpp=.o))
 DEPFILES = $(OBJS:.o=.d)
 $(CXX) = g++-5
+
 all: main
 
 $(BUILD_DIR)/%.d: %.cpp
