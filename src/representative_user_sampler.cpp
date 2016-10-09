@@ -73,7 +73,8 @@ void RepresentativeUserSampler::readData(){
     //--------read edges for the first time------------
     freopen(coauthor_file.c_str(), "r", stdin);
     ofstream fout("deepwalkdata.edgelist");
-    do tmp = getc(stdin); while(tmp != '\n' && tmp != EOF);
+    if(!partfile)
+        do tmp = getc(stdin); while(tmp != '\n' && tmp != EOF);
     while(readstr(temp) != EOF) {
         int index1 = register_map.find(string(temp))->second;
         readstr(temp);
@@ -161,7 +162,8 @@ void RepresentativeUserSampler::readEdge()//use for streaming
     do{
         cout << "reading file "<<filename<<endl;
         freopen(filename.c_str(), "r", stdin);
-        do tmp = getc(stdin); while(tmp != '\n' && tmp != EOF);
+        if(!partfile)
+            do tmp = getc(stdin); while(tmp != '\n' && tmp != EOF);
         while(readstr(temp) != EOF) {
             int index1 = register_map.find(string(temp))->second;
             readstr(temp);
