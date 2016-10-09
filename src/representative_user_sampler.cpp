@@ -93,9 +93,14 @@ void RepresentativeUserSampler::readData(){
         if(!partfile)
             do tmp = getc(stdin); while(tmp != '\n' && tmp != EOF);
         while(readstr(temp) != EOF) {
-            int index1 = register_map.find(string(temp))->second;
+            string strtmp = string(temp);
+            auto ret1 = register_map.find(strtmp);
+            int index1 = ret1->second;
             readstr(temp);
-            int index2 = register_map.find(string(temp))->second;
+            strtmp = string(temp);
+            auto ret2 = register_map.find(strtmp);
+            if(ret1 == register_map.end() || ret2 == register_map.end()) continue;
+            int index2 = ret2->second;
             scanf("%d", &tmp);
             if(deepwalk)
                 fout << index1 <<" "<<index2 <<endl;
@@ -186,13 +191,12 @@ void RepresentativeUserSampler::readEdge()//use for streaming
             do tmp = getc(stdin); while(tmp != '\n' && tmp != EOF);
         while(readstr(temp) != EOF) {
             string strtmp = string(temp);
-            auto ret2 = register_map.find(strtmp);
-            if(ret2 == register_map.end()) continue;
-            int index1 = ret2->second;
+            auto ret1 = register_map.find(strtmp);
+            int index1 = ret1->second;
             readstr(temp);
             strtmp = string(temp);
-            ret2 = register_map.find(strtmp);
-            if(ret2 == register_map.end()) continue;
+            auto ret2 = register_map.find(strtmp);
+            if(ret1 == register_map.end() || ret2 == register_map.end()) continue;
             int index2 = ret2->second;
             scanf("%d", &tmp);
             if(people[index1].read_state < 2 && people[index2].read_state < 2 && people[index1].read_state + people[index2].read_state > 0)// new edge
