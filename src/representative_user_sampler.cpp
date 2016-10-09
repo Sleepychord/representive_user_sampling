@@ -54,7 +54,9 @@ void RepresentativeUserSampler::readData(){
     for(int i = 0;i < maxd;i++)
         groups.push_back(Group(i));
     //-----------read people-------------------
+    int pcnt = 0;
     while(readstr(temp) != EOF) {
+    if((pcnt++) % 10000 == 0) cout<< "reading people " << pcnt <<endl;;
     people.push_back(Person());
     Person& r = people[people.size()-1];
     register_map.insert(pair<string, int > (string(temp), cnt++));
@@ -71,21 +73,37 @@ void RepresentativeUserSampler::readData(){
     readstr(temp);
     }
     //--------read edges for the first time------------
-    freopen(coauthor_file.c_str(), "r", stdin);
+    pcnt = 0;
+    int num = 0;
+    string filename =(partfile) ? coauthor_file + string("part-00000") : coauthor_file;
+    string copy_pre = coauthor_file;
+    auto nextfile = [& filename, & num, copy_pre](){
+        num ++;
+        char nametmp[100];
+        sprintf(nametmp, "part-%05d", num);
+        filename = copy_pre + nametmp;
+        FILE* fh = fopen(filename.c_str(),"r");
+        if(fh == NULL) return false;
+        else return true;
+    };
     ofstream fout("deepwalkdata.edgelist");
-    if(!partfile)
-        do tmp = getc(stdin); while(tmp != '\n' && tmp != EOF);
-    while(readstr(temp) != EOF) {
-        int index1 = register_map.find(string(temp))->second;
-        readstr(temp);
-        int index2 = register_map.find(string(temp))->second;
-        scanf("%d", &tmp);
-        if(deepwalk)
-            fout << index1 <<" "<<index2 <<endl;
-        people[index1].paper += tmp;
-        people[index2].paper += tmp;
-        readstr(temp);
-    }
+    do{
+        cout << "reading file "<<filename<<endl;
+        freopen(coauthor_file.c_str(), "r", stdin);
+        if(!partfile)
+            do tmp = getc(stdin); while(tmp != '\n' && tmp != EOF);
+        while(readstr(temp) != EOF) {
+            int index1 = register_map.find(string(temp))->second;
+            readstr(temp);
+            int index2 = register_map.find(string(temp))->second;
+            scanf("%d", &tmp);
+            if(deepwalk)
+                fout << index1 <<" "<<index2 <<endl;
+            people[index1].paper += tmp;
+            people[index2].paper += tmp;
+            readstr(temp);
+        }
+    }while(partfile && nextfile());
     fout.close();
     //----------------deep walk-----------------
     if(deepwalk){
@@ -119,6 +137,7 @@ void RepresentativeUserSampler::readData(){
         }
     }
     //-------normalization--------------------
+    cout<< "normalization..."<<endl;
     for(int number = 0;number < people.size();number++){
         double svalue = 0;
         for(int j = 0;j < maxd;j++)
@@ -128,6 +147,7 @@ void RepresentativeUserSampler::readData(){
             people[number].value[j] /= svalue;
     }
     //----------sort for papar number----------
+    cout<< "sorting"<<endl;
     for(int i = 0;i < people.size();i++)
         order_list.push_back(i);
     sort(order_list.begin(), order_list.end(), [this](int x, int y){ return people[x].paper > people[y].paper; });
@@ -186,6 +206,7 @@ void RepresentativeUserSampler::readEdge()//use for streaming
 void RepresentativeUserSampler::main(){
     freopen(output_file.c_str(),"w", stdout);
     for(int u = 0;u < K;u++){
+        cout<<"finding "<<u<<endl;
         Person* p = solver->find();
         cout << p->name <<endl;
         choose(p);
