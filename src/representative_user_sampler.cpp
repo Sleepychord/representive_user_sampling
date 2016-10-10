@@ -87,11 +87,32 @@ void RepresentativeUserSampler::readData(){
         else return true;
     };
     ofstream fout("deepwalkdata.edgelist");
-    do{
+    if(partfile){
+        do{
+            cout << "reading file "<<filename<<endl;
+            freopen(filename.c_str(), "r", stdin);
+            int ch = '0';
+            while(readstr(temp) != EOF){
+                string strtmp = string(temp);
+                auto ret1 = register_map.find(strtmp);
+                int index1 = ret1->second;
+                while((ch != EOF) && (ch != '\n')) {
+                    ch = readstr(temp);
+                    strtmp = string(temp);
+                    auto ret2 = register_map.find(strtmp);
+                    int index2 = ret2->second;
+                    if(ret1 == register_map.end() || ret2 == register_map.end()) continue;
+                    if(deepwalk)
+                        fout << index1 <<" "<<index2 <<endl;
+                    people[index1].paper += 1;
+                    people[index2].paper += 1;
+                }
+            }    
+        }while(nextfile());
+    }else{
         cout << "reading file "<<filename<<endl;
         freopen(coauthor_file.c_str(), "r", stdin);
-        if(!partfile)
-            do tmp = getc(stdin); while(tmp != '\n' && tmp != EOF);
+        do tmp = getc(stdin); while(tmp != '\n' && tmp != EOF);
         while(readstr(temp) != EOF) {
             string strtmp = string(temp);
             auto ret1 = register_map.find(strtmp);
@@ -108,7 +129,7 @@ void RepresentativeUserSampler::readData(){
             people[index2].paper += tmp;
             readstr(temp);
         }
-    }while(partfile && nextfile());
+    }
     fout.close();
     //----------------deep walk-----------------
     if(deepwalk){
@@ -184,11 +205,33 @@ void RepresentativeUserSampler::readEdge()//use for streaming
         if(fh == NULL) return false;
         else return true;
     };
-    do{
+    if(partfile){
+        do{
+            cout << "reading file "<<filename<<endl;
+            freopen(filename.c_str(), "r", stdin);
+            int ch = '0';
+            while(readstr(temp) != EOF){
+                string strtmp = string(temp);
+                auto ret1 = register_map.find(strtmp);
+                int index1 = ret1->second;
+                while((ch != EOF) && (ch != '\n')) {
+                    ch = readstr(temp);
+                    strtmp = string(temp);
+                    auto ret2 = register_map.find(strtmp);
+                    int index2 = ret2->second;
+                    if(ret1 == register_map.end() || ret2 == register_map.end()) continue;
+                    if(people[index1].read_state < 2 && people[index2].read_state < 2 && people[index1].read_state + people[index2].read_state > 0)// new edge
+                    {
+                        people[index1].nebo.push_back(pair<Person*, double>(&people[index2], tmp * 1.0 / people[index2].paper));
+                        people[index2].nebo.push_back(pair<Person*, double>(&people[index1], tmp * 1.0 / people[index1].paper));
+                    }
+                }
+            }    
+        }while(nextfile());
+    }else{
         cout << "reading file "<<filename<<endl;
-        freopen(filename.c_str(), "r", stdin);
-        if(!partfile)
-            do tmp = getc(stdin); while(tmp != '\n' && tmp != EOF);
+        freopen(coauthor_file.c_str(), "r", stdin);
+        do tmp = getc(stdin); while(tmp != '\n' && tmp != EOF);
         while(readstr(temp) != EOF) {
             string strtmp = string(temp);
             auto ret1 = register_map.find(strtmp);
@@ -206,7 +249,7 @@ void RepresentativeUserSampler::readEdge()//use for streaming
             }
             readstr(temp);
         }
-    }while(partfile && nextfile());
+    }
     for(auto & p: people)
     if(p.read_state == 1)
         p.read_state = 2;
@@ -215,10 +258,10 @@ void RepresentativeUserSampler::main(){
     clock_t start_time = clock();
     freopen(output_file.c_str(),"w", stdout);
     for(int u = 0;u < K;u++){
-        cout<<"finding "<<u<<endl;
+        cerr<<"finding "<<u<<endl;
         Person* p = solver->find();
         cout << p->name <<endl;
         choose(p);
     }
-    cout <<" time of calculating is "<< (clock() - start_time) / CLOCKS_PER_SEC <<endl;
+    cout <<" time of calculating is "<< (clock() - start_time) * 1.0 / CLOCKS_PER_SEC <<endl;
 }
