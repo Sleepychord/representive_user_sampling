@@ -84,7 +84,10 @@ void RepresentativeUserSampler::readData(){
         filename = copy_pre + nametmp;
         FILE* fh = fopen(filename.c_str(),"r");
         if(fh == NULL) return false;
-        else return true;
+        else {
+            fclose(fh);
+            return true;
+        }
     };
     ofstream fout("deepwalkdata.edgelist");
     if(partfile){
@@ -203,7 +206,10 @@ void RepresentativeUserSampler::readEdge()//use for streaming
         filename = copy_pre + nametmp;
         FILE* fh = fopen(filename.c_str(),"r");
         if(fh == NULL) return false;
-        else return true;
+        else {
+            fclose(fh);
+            return true;
+        }
     };
     if(partfile){
         do{
