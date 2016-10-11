@@ -256,12 +256,13 @@ void RepresentativeUserSampler::readEdge()//use for streaming
 }
 void RepresentativeUserSampler::main(){
     clock_t start_time = clock();
-    freopen(output_file.c_str(),"w", stdout);
+    ofstream fout(output_file);
     for(int u = 0;u < K;u++){
         cerr<<"finding "<<u<<endl;
         Person* p = solver->find();
-        cout << p->name <<endl;
+        fout << p->name <<endl;
         choose(p);
     }
-    cout <<" time of calculating is "<< (clock() - start_time) * 1.0 / CLOCKS_PER_SEC <<endl;
+    fout <<" time of calculating is "<< (clock() - start_time) * 1.0 / CLOCKS_PER_SEC <<endl;
+    fout.close();
 }
