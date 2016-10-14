@@ -10,6 +10,12 @@ void RepresentativeUserSampler::choose(Person* p){
         groups[index].label_next();
         if(groups[index].get_next() && groups[index].get_next()->read_state == 0){
             need_read = true;
+            break;
+        }
+    }
+    if(need_read)
+    {
+        for(int index = 0;index < maxd;index++){
             Group& gr = groups[index];
             for(int i = gr.now;i < gr.now + B && i < gr.size();i++)
             {
@@ -17,9 +23,6 @@ void RepresentativeUserSampler::choose(Person* p){
                     gr.ordered_member[i]->read_state = 1;
             }
         }
-    }
-    if(need_read)
-    {
         cerr<< "need_read" <<endl;
         readEdge();
     }
@@ -54,6 +57,7 @@ void RepresentativeUserSampler::readData(){
     for(int i = 0;i < maxd;i++)
         groups.push_back(Group(i));
     //-----------read people-------------------
+    clock_t start_time = clock();
     int pcnt = 0;
     while(readstr(temp) != EOF) {
     if((pcnt++) % 10000 == 0) cout<< "reading people " << pcnt <<endl;;
@@ -72,7 +76,9 @@ void RepresentativeUserSampler::readData(){
     }
     readstr(temp);
     }
+    tout<<"time of read people is "<<(clock() - start_time) * 1.0 / CLOCKS_PER_SEC <<endl;
     //--------read edges for the first time------------
+    start_time = clock();
     pcnt = 0;
     int num = 0;
     string filename =(partfile) ? coauthor_file + string("part-00000") : coauthor_file;
@@ -89,6 +95,7 @@ void RepresentativeUserSampler::readData(){
             return true;
         }
     };
+    tout<<"time of read edge first time is "<<(clock() - start_time) * 1.0 / CLOCKS_PER_SEC <<endl;
     ofstream fout("deepwalkdata.edgelist");
     if(partfile){
         do{
@@ -194,6 +201,7 @@ void RepresentativeUserSampler::readData(){
 }
 void RepresentativeUserSampler::readEdge()//use for streaming
 {
+    clock_t start_time = clock();
     int tmp;
     char temp[256];
     int num = 0;
@@ -259,8 +267,10 @@ void RepresentativeUserSampler::readEdge()//use for streaming
     for(auto & p: people)
     if(p.read_state == 1)
         p.read_state = 2;
+    tout<<"time of read edge is "<<(clock() - start_time) * 1.0 / CLOCKS_PER_SEC <<endl;
 }
 void RepresentativeUserSampler::main(){
+    tout << "begin main" <<endl;
     clock_t start_time = clock();
     ofstream fout(output_file);
     for(int u = 0;u < K;u++){
@@ -269,6 +279,7 @@ void RepresentativeUserSampler::main(){
         fout << p->name <<endl;
         choose(p);
     }
-    fout <<" time of calculating is "<< (clock() - start_time) * 1.0 / CLOCKS_PER_SEC <<endl;
+    tout <<"time of main is "<< (clock() - start_time) * 1.0 / CLOCKS_PER_SEC <<endl;
+    tout.close();
     fout.close();
 }
