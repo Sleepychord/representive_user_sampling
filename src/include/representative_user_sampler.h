@@ -21,7 +21,6 @@ using std::pair;
 using std::vector;
 class RepresentativeUserSampler{
 public:
-    const char timefile[9] = "time.txt";
     std::ofstream tout;
     bool deepwalk, streaming;
     std::string author_file, coauthor_file, output_file;
@@ -41,7 +40,7 @@ public:
     RepresentativeUserSampler(const char* filename): deepwalk(false), streaming(false){
         std::string s;
         std::ifstream fin(filename);
-        tout.open(timefile, std::ofstream::out);
+        tout.open("time.txt", std::ofstream::out);
         partfile = 0;
         while(fin >> s){
             int tmp = 0;
