@@ -38,7 +38,7 @@ public:
     void readEdge();//use for streaming
     void main();
     int readstr(char *str);
-    RepresentativeUserSampler(const char filename[]): deepwalk(false), streaming(false){
+    RepresentativeUserSampler(const char* filename): deepwalk(false), streaming(false){
         std::string s;
         std::ifstream fin(filename);
         tout.open(timefile, std::ofstream::out);
