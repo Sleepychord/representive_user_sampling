@@ -95,7 +95,6 @@ void RepresentativeUserSampler::readData(){
             return true;
         }
     };
-    tout<<"time of read edge first time is "<<(clock() - start_time) * 1.0 / CLOCKS_PER_SEC <<endl;
     ofstream fout("deepwalkdata.edgelist");
     if(partfile){
         do{
@@ -141,6 +140,7 @@ void RepresentativeUserSampler::readData(){
         }
     }
     fout.close();
+    tout<<"time of read edge first time is "<<(clock() - start_time) * 1.0 / CLOCKS_PER_SEC <<endl;
     //----------------deep walk-----------------
     if(deepwalk){
         char cmd[100];
